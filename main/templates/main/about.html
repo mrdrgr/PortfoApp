@@ -1,0 +1,135 @@
+{% extends 'main/base.html' %} {% load static %} {% block navbar %}
+<nav class="navbar navbar-fixed-top navbar-default">
+  <div class="container">
+    <button
+      type="button"
+      class="navbar-toggle collapsed"
+      data-toggle="collapse"
+      data-target="#navbar-collapse"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'main-home' %}" title="">01 : Home</a></li>
+        <li><a href="{% url 'main-about' %}" title="">02 : About me</a></li>
+        <li><a href="{% url 'main-contact' %}" title="">03 : Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock navbar %} {% block content %}
+<div class="section-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="section-container-spacer text-center">
+          <h1 class="h2">02 : About me</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <h3>Summary</h3>
+                <p>
+                  Highly skilled and passionate machine learning engineer with a
+                  solid background in programming using Python. Proficient in
+                  using Numpy, Pandas, Matplotlib for data manipulation and
+                  visualization. Strong knowledge of Scikit Learn library and
+                  PyTorch framework for building and deploying machine learning
+                  and deep learning models. Strong problem solving skills and a
+                  passion for staying up to date with the latest advancements in
+                  AI. Seeking to leverage my skills and experience in a
+                  challenging role at a leading organization.
+                </p>
+                <h3>My Skillset</h3>
+                <ol>
+                  <li>
+                    Web Development Skills:
+                    <ul>
+                      <li>Python</li>
+                      <li>Djnago</li>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>Javascript</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Machine Learing Skills:
+                    <ul>
+                      <li>Numpy</li>
+                      <li>Pandas</li>
+                      <li>Matplotlib</li>
+                      <li>Scikit Learn</li>
+                      <li>PyTorch</li>
+                    </ul>
+                  </li>
+                </ol>
+
+                <h3>Projects I Built</h3>
+                <div>
+                  <h4>Heart Sense</h4>
+                  <p>
+                    Created a binary classification project called Heart Sense
+                    that predicts whether someone has heart disease or not with
+                    high accuracy using several factors such as age, gender etc.
+                    the project contains advancd technqiues in order to achieve
+                    the best result.
+                    <a href="https://github.com/mrdrgr/HeartSense"
+                      >Click to see</a
+                    >
+                  </p>
+                </div>
+                <div>
+                  <h4>Dozer Pricer</h4>
+                  <p>
+                    Built a regression project that is called Dozer Pricer with
+                    the ability to predict sale prices for bulldozers using a
+                    large public dataset on Kaggle. This project has used
+                    techniques such as data cleaning and data encoding in order
+                    to deliver high accuracy level.
+                    <a href="https://github.com/mrdrgr/DozerPricer"
+                      >Click to see</a
+                    >
+                  </p>
+                </div>
+                <div>
+                  <h4>Dog Vision</h4>
+                  <p>
+                    Created and deployed a deep neural network project called
+                    Dog Vision to Hugging Face using Pytorch and Gradio. This
+                    project can predict 120 different dog breeds from images of
+                    dogs with high accuracy level.
+                    <a href="https://github.com/mrdrgr/DogVision"
+                      >Click to see</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <img
+                  src="{% static 'main/images/face.jpg' %}"
+                  class="img-responsive"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    navActivePage();
+  });
+</script>
+{% endblock content %}
